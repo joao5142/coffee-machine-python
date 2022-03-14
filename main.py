@@ -112,15 +112,15 @@ def build_coffe(coffee):
 def transaction_successful(money,drink_cost):
     """Return true when the payment is accepted,or False if moneys is insufficient"""
     if(money>=drink_cost):
-        return True
+         return True
     else:
         print("Sorry that's not enough money.Money refunded.")
 
 # TODO 1. Ask to the user input
 # TODO 2. Verify if the resources are sufficient
 # TODO 3. Insert coins
-# TODO 4. Verify if coins is enoghout to buy
-
+# TODO 4. Verify if coins is enough to buy
+# TODO 5. Process the payment and add money to machine
 while should_continue:
     choice=input("What Would you like ? (espresso/latte/cappuccino): ").lower()
     if(choice== "off"):
