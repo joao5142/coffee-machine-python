@@ -1,37 +1,10 @@
-MENU = {
-    "espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18,
-        },
-        "cost": 1.5,
-    },
-    "latte": {
-        "ingredients": {
-            "water": 200,
-            "milk": 150,
-            "coffee": 24,
-        },
-        "cost": 2.5,
-    },
-    "cappuccino": {
-        "ingredients": {
-            "water": 250,
-            "milk": 100,
-            "coffee": 24,
-        },
-        "cost": 3.0,
-    }
-}
+from art import logo
+from data import MENU,resources
 
-resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
-}
 should_continue=True
 cost=0
 can_buy=False
+
 def print_report():
     global cost
     water=resources["water"]
@@ -121,6 +94,7 @@ def transaction_successful(money,drink_cost):
 # TODO 3. Insert coins
 # TODO 4. Verify if coins is enough to buy
 # TODO 5. Process the payment and add money to machine
+print(logo)
 while should_continue:
     choice=input("What Would you like ? (espresso/latte/cappuccino): ").lower()
     if(choice== "off"):
