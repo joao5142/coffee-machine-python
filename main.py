@@ -81,8 +81,8 @@ def process_coins():
 
     return amount
 
-def process_payment(item,coins_value):
-    drink_value=float(MENU[item]["cost"])
+def process_payment(coffee,coins_value):
+    drink_value=float(MENU[coffee]["cost"])
 
     if(coins_value>drink_value):
         money_refused=float(coins_value)-drink_value
@@ -128,3 +128,5 @@ while should_continue:
        cost+= process_payment(answer,coins_value)
        build_coffe(answer)
        can_buy = False
+
+
